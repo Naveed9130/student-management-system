@@ -1,40 +1,52 @@
 import { Menu } from "lucide-react";
+import { motion } from "framer-motion";
 import Logo from "../ui/Logo";
 import Button from "../ui/Button";
 
 const Navbar = () => {
   return (
-    <header className="fixed top-0 left-0 z-50 w-full border-b border-slate-200/40 bg-white/70 backdrop-blur-xl">
+    <motion.header
+      initial={{ y: -80 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="fixed top-0 z-50 w-full border-b border-white/30 bg-white/70 backdrop-blur-xl"
+    >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-8">
         <Logo />
 
-        <nav className="hidden gap-8 font-medium text-slate-700 lg:flex">
-          <a href="#" className="transition hover:text-blue-600">
+        <nav className="hidden gap-8 lg:flex">
+          <a href="#" className="font-medium hover:text-blue-600">
             Home
           </a>
 
-          <a href="#" className="transition hover:text-blue-600">
+          <a href="#" className="font-medium hover:text-blue-600">
             Features
           </a>
 
-          <a href="#" className="transition hover:text-blue-600">
-            About
+          <a href="#" className="font-medium hover:text-blue-600">
+            Pricing
           </a>
 
-          <a href="#" className="transition hover:text-blue-600">
+          <a href="#" className="font-medium hover:text-blue-600">
             Contact
           </a>
         </nav>
 
-        <div className="hidden lg:block">
-          <Button text="Login" />
+        <div className="hidden items-center gap-4 lg:flex">
+          <Button variant="secondary">
+            Login
+          </Button>
+
+          <Button>
+            Get Started
+          </Button>
         </div>
 
         <button className="lg:hidden">
           <Menu />
         </button>
       </div>
-    </header>
+    </motion.header>
   );
 };
 
