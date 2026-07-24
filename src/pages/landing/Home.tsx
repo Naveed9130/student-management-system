@@ -1,8 +1,12 @@
 import Navbar from "../../components/layout/Navbar";
 import Hero from "../../components/landing/Hero";
 import Features from "../../components/landing/Features";
-import StatCard from "../../components/cards/StatCard";
-import { GraduationCap } from "lucide-react";
+import DashboardPreview from "../../components/landing/DashboardPreview";
+import Stats from "../../components/landing/Stats";
+import Testimonials from "../../components/landing/Testimonials";
+import CallToAction from "../../components/landing/CallToAction";
+import Footer from "../../components/layout/Footer";
+
 
 const Home = () => {
   return (
@@ -10,15 +14,11 @@ const Home = () => {
       <Navbar />
       <Hero />
       <Features />
-
-      <div className="max-w-7xl mx-auto py-20 px-6">
-        <StatCard
-          title="Students"
-          value="12,560"
-          icon={<GraduationCap size={28} />}
-          color="bg-blue-600"
-        />
-      </div>
+      <DashboardPreview />
+       <Stats />
+       <Testimonials />
+        <CallToAction />
+         <Footer />
     </>
   );
 };
