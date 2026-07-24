@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 
@@ -14,7 +13,7 @@ const stats = [
 
 const Stats = () => {
 
-        const { ref, inView } = useInView({
+        const { ref } = useInView({
   triggerOnce: true,
   threshold: 0.4,
 });

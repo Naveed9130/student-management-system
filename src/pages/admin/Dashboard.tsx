@@ -1,5 +1,4 @@
 import DashboardLayout from "../../layouts/DashboardLayout";
-import DashboardCards from "../../components/dashboard/DashboardCards";
 import AttendanceChart from "../../components/charts/AttendanceChart";
 import StudentGrowthChart from "../../components/charts/StudentGrowthChart";
 import RecentActivities from "../../components/dashboard/RecentActivities";
